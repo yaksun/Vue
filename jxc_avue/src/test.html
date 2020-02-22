@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr1=[17,19,23,56,78,15]
+
+    var newArr1=[]
+
+
+    for(var i=0;i<arr1.length;i++){
+        newArr1[i]=[]
+        for (var j=0;j<arr1.length;j++){
+            newArr1[i].push(arr1[i]*parseInt(Math.random()*9))
+        }
+    }
+
+    console.log(newArr1)
+
+
+</script>
+</body>
+</html>
