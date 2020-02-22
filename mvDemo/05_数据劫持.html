@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     
+    <script src="./js/mvvm.js"></script>
+    <script src="./js/compile.js"></script>
+    <script src="./js/observer.js"></script>
+    <script src="./js/watcher.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{name}}
+        <p v-text="name"></p>
+        <p v-text="b.c"></p>
+        <button v-on:click="changeMsg">更新数据</button>
+
+    </div>
+    <script>
+   new MVVM({
+            el:"#app",
+            data:{
+                name:'数据劫持',
+                b:{
+                    c:'双层数据结构'
+                },
+               
+            },
+            methods:{
+                changeMsg(){
+                    this.name="小美"
+                    this.b.c = '更新后的数据'
+                }
+            }
+        })
+   
+
+
+
+    </script>
+</body>
+</html>
