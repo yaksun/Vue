@@ -1,0 +1,14 @@
+笔记：
+关联性，不用搞那么详细
+
+git commit -a -m准备做关系管理 --no-verify
+git commit -a -m显示ER图地址到页面 --no-verify
+git commit -a -m去掉分页加上，删除所有工程的功能，调整对话框大小 --no-verify
+打包生成文件
+npm run build:prod
+
+rm -fr  /opt/sloth/conf/webapp
+cp -R dist /opt/sloth/conf/webapp
+
+rm -fr /opt/我的产品代码生成器/lazyman/src/main/resources/webapp
+cp -R dist /opt/我的产品代码生成器/lazyman/src/main/resources/webapp
