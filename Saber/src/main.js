@@ -8,63 +8,41 @@ import './error'; // 日志
 import store from './store';
 import { loadStyle } from './util/util'
 import * as urls from '@/config/env';
+import Element from 'element-ui';
 import {
-  iconfontUrl,
-  iconfontVersion
+    iconfontUrl,
+    iconfontVersion
 } from '@/config/env';
-import * as filters from './filters' // 全局filter
+import i18n from './lang' // Internationalization
 import './styles/common.scss';
 
-// 引入avue的包
-import Avue from '@smallwei/avue';
-import '@smallwei/avue/lib/index.css'
-
 import basicContainer from './components/basic-container/main'
-import VueClipboard from 'vue-clipboard2'
-// 插件 json 展示
-import vueJsonTreeView from 'vue-json-tree-view'
-
-
-Vue.use(Avue)
 
 Vue.use(router)
-
-Vue.use(VueClipboard)
-
-Vue.use(vueJsonTreeView)
-
 Vue.use(VueAxios, axios)
-
+Vue.use(Element, {
+    i18n: (key, value) => i18n.t(key, value)
+})
+Vue.use(window.AVUE, {
+    i18n: (key, value) => i18n.t(key, value)
+})
 //注册全局容器
 Vue.component('basicContainer', basicContainer)
 // 加载相关url地址
 Object.keys(urls).forEach(key => {
-  Vue.prototype[key] = urls[key];
+    Vue.prototype[key] = urls[key];
 })
 
-// 加载过滤器
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, filters[key])
-})
 // 动态加载阿里云字体库
 iconfontVersion.forEach(ele => {
-  loadStyle(iconfontUrl.replace('$key', ele));
+    loadStyle(iconfontUrl.replace('$key', ele));
 })
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    i18n,
+    render: h => h(App)
 }).$mount('#app')
-
-
-// new Vue({
-//   el:'#app',
-//   component:{App},
-//   template:'<App />',
-//   store,
-//   router,
-
-// })
