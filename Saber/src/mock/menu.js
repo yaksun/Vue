@@ -36,11 +36,30 @@ const top = [{
     },
     parentId: 3
   }]
+
+
+const first=[
+  {
+    id: 33,
+    label: "引导页",
+    path: '/guide',
+    component: 'views/guide/index',
+    icon: 'icon-canshu',
+    children: [],
+  },
+]
+
 export default ({mock}) => {
   if (!mock) return;
   Mock.mock('/user/getTopMenu', 'get', () => {
     return {
       data: top
+    }
+  })
+
+  Mock.mock('/api/blade-system/menu/routes', 'get', () => {
+    return {
+      data: first
     }
   })
 

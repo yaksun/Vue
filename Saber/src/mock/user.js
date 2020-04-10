@@ -14,6 +14,16 @@ export default ({ mock }) => {
         data: new Date().getTime() + ''
     });
 
+    // 模拟验证码
+    Mock.mock('/api/blade-auth/captcha','get',{
+        data:'9999'
+    })
+
+
+    Mock.mock('/api/blade-auth/token','post',{
+        data: new Date().getTime() + ''
+    })
+
     //获取表格数据
     Mock.mock('/user/getTable', 'get', () => {
         let list = []

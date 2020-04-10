@@ -1,0 +1,330 @@
+.enter-section {
+  width: 100%;
+  height: 100%;
+  background-color: #09274f;
+  background: url("~@/assets/images/enter/bg-1920x1080.png") center center
+    no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    width: calc(100% - 1120px);
+    height: 8px;
+    border-top: 1px solid #009dff;
+    border-bottom: 1px solid #009dff;
+    background-color: rgba(#154c7f, 0.3);
+    position: absolute;
+    bottom: 0;
+    left: 560px;
+  }
+
+  .corner {
+    display: block;
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
+
+    &.corner-t-l {
+      width: 160px;
+      height: 418px;
+      background-image: url("~@/assets/images/enter/corner-tl-160x418.png");
+      top: 0;
+      left: 0;
+    }
+
+    &.corner-t-r {
+      width: 160px;
+      height: 418px;
+      background-image: url("~@/assets/images/enter/corner-tr-160x418.png");
+      top: 0;
+      right: 0;
+    }
+
+    &.corner-b-l {
+      width: 560px;
+      height: 417px;
+      background-image: url("~@/assets/images/enter/corner-bl-560x417.png");
+      bottom: 0;
+      left: 0;
+    }
+
+    &.corner-b-r {
+      width: 560px;
+      height: 417px;
+      background-image: url("~@/assets/images/enter/corner-br-560x417.png");
+      bottom: 0;
+      right: 0;
+    }
+
+    &.line-t-l {
+      width: 201px;
+      height: 30px;
+      background-image: url("~@/assets/images/enter/line-tl-201x30.png");
+      top: 0;
+      left: 50%;
+      margin-left: -621px;
+    }
+
+    &.line-t-r {
+      width: 201px;
+      height: 30px;
+      background-image: url("~@/assets/images/enter/line-tr-201x30.png");
+      top: 0;
+      right: 50%;
+      margin-right: -621px;
+    }
+
+    &.line-t-l-c {
+      width: calc(50% - 781px);
+      height: 20px;
+      background-image: url("~@/assets/images/enter/line-top-1x20.png");
+      background-size: 1px 20px;
+      background-repeat: repeat-x;
+      top: 0;
+      left: 160px;
+    }
+
+    &.line-t-r-c {
+      width: calc(50% - 781px);
+      height: 20px;
+      background-image: url("~@/assets/images/enter/line-top-1x20.png");
+      background-size: 1px 20px;
+      background-repeat: repeat-x;
+      top: 0;
+      right: 160px;
+    }
+  }
+
+  .enter-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    header {
+      width: 100%;
+      height: 98px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+
+      .header-center {
+        width: 834px;
+        height: 98px;
+        background-color: #09274f;
+        background: url("~@/assets/images/enter/head-bg-center-834x98.png")
+          center center no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .login-img {
+          width: 50px;
+          height: 50px;
+        }
+
+        & > p {
+          font-size: 34px;
+          color: #fff;
+          margin-left: 15px;
+          margin-top: -6px;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+      }
+
+      .close-btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        justify-self: flex-end;
+        border: 1px solid #ff6464;
+        background-color: rgba(#ff6464, 0.2);
+        box-shadow: 0 0 10px rgba(#ff6464, 1) inset;
+        border-radius: 5px;
+        background: url("~@/assets/images/enter/icon-quit-16x16.png") center
+          center no-repeat;
+        background-size: 16px 16px;
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 20px rgba(#ff6464, 1) inset;
+        }
+      }
+    }
+
+    article {
+      height: 100%;
+      padding: 120px 40px 180px 0;
+
+      .enter-cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 100%;
+
+        .card-item {
+          width: 33.3%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .card {
+            width: 182px;
+            height: 250px;
+            background: url("~@/assets/images/enter/enter-card-bg-normal-182x210.png")
+              center 0 no-repeat;
+            background-size: 182px 210px;
+            display: flex;
+            align-items: center;
+            flex-flow: column;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover,
+            &:active,
+            &:focus {
+              background-image: url("~@/assets/images/enter/enter-card-bg-hover-182x210.png");
+              transition: all 0.2s;
+
+              p {
+                color: #00c6ff;
+              }
+            }
+
+            i {
+              display: block;
+              width: 74px;
+              height: 74px;
+              background-size: cover;
+              background-position: center center;
+              background-repeat: no-repeat;
+              margin-top: 52px;
+              margin-bottom: 70px;
+
+              &.icon-01 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-01-74x74.png");
+              }
+
+              &.icon-02 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-02-74x74.png");
+              }
+
+              &.icon-03 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-03-74x74.png");
+              }
+
+              &.icon-05 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-04-74x74.png");
+              }
+
+              &.icon-04 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-05-74x74.png");
+              }
+
+              &.icon-08 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-06-74x74.png");
+              }
+
+              &.icon-07 {
+                background-image: url("~@/assets/images/enter/enter-card-icon-07-74x74.png");
+              }
+
+              &.icon-06 {
+                background-image: url("~@/assets/images/enter/enter-card-ip-webcast-server-icon.png");
+              }
+            }
+
+            p {
+              font-size: 20px;
+              color: #fff;
+              line-height: 1.2;
+              text-align: center;
+            }
+          }
+
+          @media screen and (max-height: 800px) {
+            .card {
+              width: 130px;
+              height: 180px;
+              background-size: 130px 150px;
+
+              i {
+                width: 50px;
+                height: 50px;
+                margin-top: 40px;
+                margin-bottom: 50px;
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+      .panel-wrapper {
+        width: 100%;
+        height: 100px;
+        background: url("~@/assets/images/enter/btn-bg-kanban-1600x30.png")
+          center center no-repeat;
+        background-size: 100% 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+
+        .panel-btn {
+          display: block;
+          width: 210px;
+          height: 100px;
+          background: url("~@/assets/images/enter/btn-kanban-210x100.png")
+            center center no-repeat;
+          background-size: cover;
+          cursor: pointer;
+          transition: all 0.2s;
+
+          &:hover {
+            background: url("~@/assets/images/enter/btn-kanban-hover-210x100.png")
+              center center no-repeat;
+            transition: all 0.2s;
+          }
+        }
+      }
+    }
+
+    footer {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #fff;
+
+      & > span {
+        font-size: 12px;
+        color: #fff;
+        margin: 0 10px;
+      }
+    }
+  }
+}

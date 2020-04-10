@@ -8,7 +8,7 @@ export const loginByUsername = (tenantId, account, password, type, key, code) =>
     'Captcha-Key': key,
     'Captcha-Code': code,
   },
-  params: {
+  data: {
     grantType: 'captcha',
     tenantId,
     account,

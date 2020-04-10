@@ -17,9 +17,12 @@ import i18n from './lang' // Internationalization
 import './styles/common.scss';
 
 import basicContainer from './components/basic-container/main'
+// import xButton from '@/components/demo/xButton.vue'
+
 
 Vue.use(router)
 Vue.use(VueAxios, axios)
+// Vue.use('x-button',xButton)
 Vue.use(Element, {
     i18n: (key, value) => i18n.t(key, value)
 })

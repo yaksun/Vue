@@ -1,9 +1,9 @@
 import Mock from 'mockjs'
 
 /**
- * 
+ *
  * 动态模拟菜单
- * 
+ *
  * label菜单的名字
  * path菜单的路径
  * icon菜单的图标（系统采用的阿里巴巴图表库）
@@ -41,7 +41,7 @@ const first = [
     component: 'views/guide/index',
     icon: 'icon-canshu',
     children: [],
-  }, 
+  },
 {
   id: 13,
   label: "权限测试页",
@@ -49,7 +49,7 @@ const first = [
   icon: 'icon-quanxian',
   component: 'views/role',
   children: [],
-}, 
+},
 {
   id: 98,
   label: "档案",
@@ -114,7 +114,24 @@ const first = [
           children: [],
          },
   ],
-}, 
+},
+    {
+      id:991,
+      label:'功能测试',
+      path:'/func',
+      icon:'icon-quanxian',
+      component:'views/func/index'  ,
+        children:[
+            {
+                id: 3,
+                label: "还没想好",
+                path: 'goto',
+                component: 'views/func/goto',
+                icon: 'el-icon-document',
+                children: [],
+            }
+        ]
+    }
 // {
 //   id: 3,
 //   label: "阿里图标",
