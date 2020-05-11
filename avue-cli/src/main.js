@@ -14,6 +14,7 @@ import {
 } from '@/config/env';
 import * as filters from './filters' // 全局filter
 import './styles/common.scss';
+
 // 引入avue的包
 import Avue from '@smallwei/avue';
 import '@smallwei/avue/lib/index.css'
@@ -65,5 +66,5 @@ new Vue({
 //   template:'<App />',
 //   store,
 //   router,
- 
+
 // })
