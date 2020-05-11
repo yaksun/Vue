@@ -1,0 +1,166 @@
+.flex{
+  display: flex;
+
+}
+.flex-center{
+  justify-content: center;
+}
+.flex-item{
+  align-items: center;
+  display: flex;
+}
+.flex-between{
+  justify-content: space-between;
+  display: flex;
+}
+.advance-search{
+  position: absolute;
+  z-index: 10;
+  height: 670px;
+  width: 1300px;
+  top: 10px;
+  left: 27%;
+  background-color:rgba(255,255,255, 1);
+  font-size: 14px;
+  .search-title{
+    height: 40px;
+    background-color: #0066FF;
+    padding: 10px;
+  }
+  .title-left-img{
+    width: 24px;
+    height: 21px;
+    margin-right: 10px;
+  }
+  /**筛选条件**/
+  .search-content{
+    width: 50%;
+    border-right: 1px solid #ccc
+  }
+  .content-title{
+
+    color: black;
+    .el-select{
+      .el-input{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .el-selcet-task{
+    width: 120px !important;
+  }
+  .content-search{
+    width: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .search-img{
+    position: relative;
+    float: right;
+    top:-50%;
+    transform: translateY(50%);
+    right:10px;
+    cursor: pointer;
+  }
+  .el-checkbox .el-checkbox__label {
+    color: rgba(20, 18, 18, 0.85) !important;
+  }
+  .el-checkList{
+    // line-height:17px;
+    margin:0 10px;
+  }
+  /** 标签页**/
+  .taskList-tabs{
+    font-size: 12px;
+    .el-tabs__header .el-tabs__item {
+      width: 20% !important;
+    }
+    .el-tabs__active-bar {
+      width: 20% !important;
+    }
+  }
+  .base-case{
+    //line-height: 47px;
+    line-height: 38px;
+    .flex{
+      flex:1;
+      .el-select-task{
+      flex:1;
+    }
+    }
+
+  }
+  // .base-case .base-case-title{
+  //   line-height: 19px;
+  // }
+  .case-level{
+    width:75px;
+    text-align: center;
+    margin-left: 10px;
+  }
+  .btnClass{
+    margin-top: 15px;
+    justify-content: center;
+    .el-button--info{
+      margin-right: 20px;
+    }
+  }
+
+  .allList{
+    flex:1;
+    flex-direction: column;
+    .top{
+      height: 48px;
+    }
+  }
+
+  .base-case-title{
+    font-weight: 900;
+    margin-left: 23px;
+  }
+  .el-date-editor {
+    width:200px;
+  }
+
+  .content-title {
+    .el-select{
+      width: 150px;
+    }
+
+    .search-box{
+      width: 390px;
+      .content-search{
+        width: 100%;
+      }
+    }
+  }
+.treeDisplay{
+  min-width: 210.038px;
+  position: fixed;
+  left: 190px;
+  transform-origin: center bottom;
+  z-index: 2039;
+  margin-bottom: 12px;
+  border: 1px solid #E4E7ED;
+  border-radius: 4px;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+  box-sizing: border-box;
+  margin: 5px 0;
+  background-color: rgba(17, 89, 162, 0.9) !important;
+  .content{
+    overflow: hidden;
+    position: relative;
+    .el-tree{
+      margin-bottom: -6px;
+      margin-right: -6px;
+      overflow: scroll;
+      height: 100%;
+      max-height: 274px;
+    }
+  }
+}
+
+
+
+}
