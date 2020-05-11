@@ -1,0 +1,353 @@
+.template-taskList{
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index:9;
+  width: 20.83%;
+  height: calc(100% - 60px);
+  background-color:rgba(255,255,255, 1);
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, .3);
+
+  color: black;
+  z-index: 999;
+  .title-box{
+    background-color: #0066FF;
+    padding: 14px 0;
+  }
+  .title-img{
+    width:34px;
+  }
+  .title-text{
+    width: 83%;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .flex{
+    display: flex;
+    
+  }
+  .flex-center{
+    justify-content: center;
+  }
+  .flex-item{
+    align-items: center;
+    display: flex;
+  }
+  .flex-between{
+    justify-content: space-between;
+    display: flex;
+  }
+  .el-form .el-form-item__label {
+    color: #000 !important;
+    text-align: left !important;
+  }
+  .el-form .el-form-item--mini.el-form-item, .el-form .el-form-item--small.el-form-item {
+    margin-bottom: 0px !important;
+  }
+
+  .todo-list {
+    height: 100%;
+    /**暂无数据**/
+  .list-no-date{
+    
+    text-align: center;
+    color: #a19494 !important;
+    font-size: 12px;
+    line-height: 200px;
+  }
+  }
+  .taskList-box-grand{
+    height: calc(100% - 120px);
+    width:100%;
+  }
+  .taskList-box-father{
+    height:100%;
+    width:100%;
+  }
+  .taskList-box{
+    margin-top:12px;
+    width:100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .tablist-tips {
+    height: calc(100% - 100px);
+  }
+
+  .el-select-task {
+    color: #000;
+    position: static;
+
+    .el-form-item__content {
+      background-color: #f5f7fc;
+      border-radius: 3px;
+    }
+    .el-input .el-input__inner {
+      color: #000 !important;
+      background-color: #f5f7fc !important;
+    }
+  }
+
+  .el-checkList {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .el-checkbox {
+      margin-right: 0;
+    }
+  }
+
+  // 多选按钮组
+  .checkList{
+    margin-top:10px;
+  }
+
+  // 过滤条件
+  .guolv-box{
+    font-size: 11px;
+  }
+  .high-search{
+    justify-content: flex-end;
+    margin: 10px 0;
+    div{
+      color:#38affd !important;
+      cursor: pointer;
+    }
+  }
+  .back-default{
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  // 
+  .warning-box{
+    align-items: center;
+    margin-right:10px;
+  }
+  .search-box{
+    align-items: center;
+    input {
+      padding-left: 6px;
+    }
+    input::-webkit-input-placeholder {
+      /* placeholder颜色  */
+      color: #999;
+      /* placeholder字体大小  */
+      font-size: 14px;
+    }
+  }
+  .search-input{
+    color: black !important;
+    border: 1px solid #dddee1;
+    border-radius: 2px;
+    height: 30px;
+    width: 100%;
+    
+  }
+  .flex-fr{
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  // 警情列表
+  $color1:#ff5353; // 一级警情
+  $color2:#f4c638;  // 二级警情
+  $color3:#40c863; // 三级警情
+
+  .task-list-content-box {
+    height: 130px;
+    // margin-bottom: 10px;
+    // margin-top:10px;
+    margin:5px;
+    
+  }
+  @keyframes fade {
+    from {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 5px 5px 5px 5px #EA5455;
+    }
+    to {
+        box-shadow: none;
+    }
+}
+@-webkit-keyframes fade {
+    from {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 5px 5px 5px 5px #EA5455;
+    }
+    to {
+        box-shadow: none;
+    }
+}
+  /***待处置的边框闪烁*/
+  .task-list-un-shaow{
+    animation: fade 1500ms infinite;
+    -webkit-animation: fade 1500ms infinite;
+  }
+  .selected {
+    background-color: #edeff3;
+  }
+
+  .task-list-content-box:first-child{
+    border-top:#d6d7da 1px solid ;
+  }
+  .task-list-content{
+    width: 98%;
+    height: 100%;
+    font-size: 12px;
+    border-bottom: #d6d7da 1px solid;
+    cursor: pointer;
+  }
+  .list-left{
+    width: 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .left-content{
+      height: 80px;
+      width: 100%;
+      background-color: #40c863;
+    }
+    .level1{
+      background-color: $color1;
+    }
+    .level2{
+      background-color: $color2;
+    }
+    .level3 {
+      background-color: $color3;
+    }
+  }
+  .list-right{
+    width: calc(100% - 18px);
+    margin:0 4px 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .list-content {
+      font-size: 14px;
+      color:#000;
+    }
+
+    .list-bottom {
+      justify-content: space-between;
+    }
+  }
+  .list-number{
+    margin: 2px 0;
+    width: 100%;
+
+    
+  }
+  .list-number-no{
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #B1B1B4 !important;
+  }
+  /***每个状态显示不同的颜色**/
+  .list-number-state {
+    font-size: 14px;
+    color: #ff2d2d !important;
+  }
+  .list-number-done {
+    font-size: 14px;
+    color: #4179f7 !important;
+  }
+  .list-number-deal {
+    font-size: 14px;
+    color: #40c863 !important;
+  }
+  /**显示两行，多余的溢出隐藏**/
+  .list-content{
+    margin:5px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #333333 !important;
+  }
+  .list-keyword {
+    display: flex;
+    align-items: center;
+  }
+
+  .key-word{
+    width: 48px;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 5px;
+    text-align: center;
+    border-radius: 6px;
+    font-size:12px;
+    color: #ffffff !important;
+    margin-right: 10px;
+    background-color: #37b0ff;
+  }
+
+  .key-word.attention {
+    background-color: #f4c638;
+  }
+  .key-word.sensitive {
+    background-color: #ff5353;
+  }
+
+  .list-bottom-content{
+    margin-right:15px;
+  }
+  .list-img{
+    height: 13px;
+    width: 13px;
+    margin-right:4px;
+  }
+  .list-time,.list-addr{
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    color: #999999!important;
+  }
+  .list-time{
+    width: 118px;
+    margin-right: 3px;
+  }
+}
+
+/** 右键菜单样式 */
+.menu {
+  width: 100px;
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid #999999;
+  background-color: #f4f4f4;
+  z-index: 999;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  .menu-item {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    margin: 6px 0;
+  }
+  .right-click-img{
+    width: 24px;
+    height: 24px;
+  }
+}

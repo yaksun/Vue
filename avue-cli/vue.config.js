@@ -26,16 +26,45 @@ module.exports = {
       .end()
   },
   //配置转发代理
-  // devServer: {
-  //   proxy: {
-  //       '/api': {
-  //           target: 'http://192.168.1.4:8080',
-  //           ws: true,
-  //           pathRewrite: {
-  //               '^/api': '/api'
-  //           },
-  //           changeOrigin:true
-  //       },
-  //   }
-  // }
+  devServer: {
+    proxy: {
+        // '/api': {
+        //     target: 'http://192.168.1.4:8080',
+        //     ws: true,
+        //     pathRewrite: {
+        //         '^/api': '/api'
+        //     },
+        //     changeOrigin:true
+        // },
+
+        '/finishTopTenMap': {
+          target: 'http://192.168.1.220:8016/',
+          ws: true,
+          pathRewrite: {
+              '^/finishTopTenMap': '/finishTopTenMap'
+          },
+          changeOrigin:true
+      },
+
+      '/getNameToIssue': {
+        target: 'http://192.168.1.220:8016/',
+        ws: true,
+        changeOrigin:true
+    },
+
+        // 以什么开头的请求链接
+        '/sugrec': {
+          target: 'https://www.baidu.com',
+          ws: true,
+          changeOrigin:true
+      },
+      // http://192.168.1.220:8016/finishTopTenPie
+      // http://192.168.1.220:8016/finishTopTen
+    //   '/finishTopTenPie': {
+    //     target: 'http://192.168.1.220:8016/',
+    //     ws: true,
+    //     changeOrigin:true
+    // },
+    }
+  }
 }
