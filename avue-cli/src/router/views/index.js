@@ -9,7 +9,7 @@ export default [{
         component: () =>
             import ( /* webpackChunkName: "views" */ '@/page/wel')
     }]
-    }, 
+    },
     {
     path: '/info',
     component: Layout,
@@ -25,7 +25,7 @@ export default [{
         component: () =>
             import ( /* webpackChunkName: "views" */ '@/views/info/message')
     }]
-    }, 
+    },
     {
     path: '/advanced-router',
     component: Layout,
@@ -40,4 +40,7 @@ export default [{
         component: () =>
             import ( /* webpackChunkName: "utils" */ '@/views/advanced-router/argument-detail')
     }]
-}, ]
+}
+
+
+]

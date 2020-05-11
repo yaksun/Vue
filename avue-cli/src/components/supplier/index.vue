@@ -1,8 +1,8 @@
 <template>
     <div>
-        <avue-crud 
+        <avue-crud
         :option="option"
-         :data="data" 
+         :data="data"
          :page="page"
           @on-load="onLoad"
           @row-dblclick="handleRowDBLClick"
@@ -17,7 +17,7 @@
            v-model="obj"
            >
 
-            
+
              <template slot="menuLeft" >
               <el-button type="primary" size="small"  @click.stop="handleAdd()" v-show="status"  >新增</el-button>
             </template>
@@ -37,8 +37,8 @@
               </el-form-item>
             </el-col>
           </template>
- 
-           
+
+
 
            </avue-crud>
     </div>
@@ -49,7 +49,7 @@ export default {
     props:{
       confirmStatus:Boolean,
       visible:Boolean
-      
+
     },
     data() {
       return {
@@ -101,34 +101,34 @@ export default {
                 prop: 'contact',
             },
 
-           
 
-        
+
+
           ]
         },
         data: [
-                
+
             ]
       }
     },
     mounted(){
-      
+
       this.data = this.supplierInfo
       // console.log(this.confirmStatus)
          const {data,option} = this
         this.$emit('getInfo',{data,option})
-     
+
     },
        computed:{
        ...mapGetters(['supplierInfo']),
        status(){
-         return    !this.visible && !this.confirmStatus  
+         return    !this.visible && !this.confirmStatus
        },
-      
+
 
     },
     methods: {
-      onLoad(page) {
+      onLoad() {
         //模拟分页
         this.page.total = 40
       },
@@ -150,15 +150,15 @@ export default {
             // 弹出编辑窗口
             this.$refs.crud.rowEdit(row,row.$index);
         }
-       
+
       },
     selectionChange(list){
-     
+
       // console.log(list)
       // 将选取的数据保存到rowData中
       this.rowData=list
-     
-   
+
+
     },
     // 操作完成后取消之前的选择
      toggleSelection(val){
@@ -173,23 +173,23 @@ export default {
               message: "请选择一行再操作",
               type: "warning"
             });
-            return 
+            return
         }else if(i>1){
                this.$message({
               showClose: true,
               message: "一次不能选择多行",
               type: "warning"
             });
-            return 
+            return
         }else{
-           
+
             // 需要两个参数 当前行和下标
             // 弹出编辑窗口
         this.$refs.crud.rowEdit(this.rowData[0],this.rowData[0].$index);
-     
+
         }
 
-         
+
       },
        handelDelete(){
             let i = this.rowData.length
@@ -199,20 +199,20 @@ export default {
                   message: "请选择一行再操作",
                   type: "warning"
                 });
-                return 
+                return
             }else if(i>1){
                   this.$message({
                   showClose: true,
                   message: "一次不能选择多行",
                   type: "warning"
                 });
-                return 
+                return
             }else{
-               
+
                   // 需要两个参数 当前行和下标
             this.handelDel( this.rowData[0],this.rowData[0].$index)
-            
-         
+
+
             }
 
           },
@@ -253,12 +253,10 @@ export default {
              }
            )
 
-           
+
 
       },
-
-     
-	   handelDel(row,index){
+        handelDel(row,index){
 
          this.$confirm(`是否确认删除货商${row.board}`, "提示", {
           confirmButtonText: "确定",
@@ -278,15 +276,15 @@ export default {
 
         })
         .catch(() => { });
-     
-    
+
+
       },
     // 点击搜索按钮触发
       searchChange(params) {
          Object.assign(params, this.searchForm)
-         
+
             const {supplierInfo,searchForm} = this
-          
+
           if(Object.keys(searchForm).length){
             // 过滤函数filter
            this.data= supplierInfo.filter(p=>p.board.indexOf(searchForm.solt) !== -1 || p.arrange.indexOf(searchForm.solt) !== -1 || p.contact.indexOf(searchForm.solt) !== -1 )
@@ -294,8 +292,8 @@ export default {
           }else{
             this.data = supplierInfo
           }
-           
-      
+
+
         //  console.log(this.data)
       },
 
@@ -306,7 +304,7 @@ export default {
       // 点击确认的时候触发
       handelConfirm(){
           // console.log(this.rowData)
-               
+
          let i = this.rowData.length
             if(i==0){
                   this.$message({
@@ -314,37 +312,37 @@ export default {
                   message: "请选择一行再操作",
                   type: "warning"
                 });
-                return 
+                return
             }else if(i>1){
                   this.$message({
                   showClose: true,
                   message: "一次不能选择多行",
                   type: "warning"
                 });
-                return 
+                return
             }else{
 
-              
+
               //  触发父组件的方法
-               this.$emit('closeDialog')   
+               this.$emit('closeDialog')
                this.$emit('changeInfo',this.rowData)
                this.$store.dispatch('UpdateItem',this.rowData)
                this.toggleSelection()
-            
-         
+
+
             }
-         
+
       }
 
-     
+
     }
 
-     
-   
-    
+
+
+
 
 }
 </script>
 <style lang="">
-    
+
 </style>
