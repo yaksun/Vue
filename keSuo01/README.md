@@ -1,0 +1,3 @@
+# 注意：在活动的package.json中已移除electron，如果需要使用请使用package-electron.json进行替换使用
+# 为了在3月份进行满足联创的自动部署发布测试服务应用，暂时从package.json中移除了electron相关依赖引用
+# 并放开background.ts文件中的所有注释第一级

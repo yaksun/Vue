@@ -1,0 +1,195 @@
+/***********************************************************************************
+*****************************Home首页*********************************************
+***********************************************************************************/
+/*头部区域高度设置*/
+$home-header-height: 100px;
+
+/*底部区域高度设置*/
+$home-footer-height: 100px;
+
+/*home页面所有图标定义区域*/
+$home: '~@/assets/images/home';
+$home-title: '~@/assets/images/home/title';
+$home-map-tool-bg: '~@/assets/images/home/map-tool-bg';
+$home-map-right-kk-bg: '~@/assets/images/home/right-kk/right-kk-bg';
+$home-map-right-kk-icon: '~@/assets/images/home/right-kk/icon';
+$home-navigation: '~@/assets/images/home/navigaton';
+$home-device-list-root: '~@/assets/images/home/device-list/base';
+//title顶部区域
+$home-title-banbenhao: '#{$home-title}/banbenhao.png';
+$home-title-fanhuishouye: '#{$home-title}/fanhuishouye.png';
+$home-title-center-bg: '#{$home-title}/title-center-bg.png';
+$home-title-center-mask: '#{$home-title}/title-center-mask.png';
+$home-title-left: '#{$home-title}/title-left.png';
+$home-title-user: '#{$home-title}/user.png';
+//map-tool地图工具
+$home-map-tool-bg-bottom-bg: '#{$home-map-tool-bg}/maptool-bottom-bg.png';
+$home-map-tool-top: '#{$home-map-tool-bg}/maptool-top.png';
+$home-map-tool-mapPosition-icon-big: '#{$home-map-tool-bg}/mapPosition-icon-big.png';
+$home-map-tool-mapPosition-icon-position: '#{$home-map-tool-bg}/mapPosition-icon-position.png';
+$home-map-tool-mapPosition-icon-small: '#{$home-map-tool-bg}/mapPosition-icon-small.png';
+$home-map-tool-mapTool-bg-line: '#{$home-map-tool-bg}/mapTool-bg-line.png';
+$home-map-tool-mapTool-icon-choose: '#{$home-map-tool-bg}/mapTool-icon-choose.png';
+$home-map-tool-mapTool-icon-choose-01: '#{$home-map-tool-bg}/mapTool-icon-choose-01.png';
+$home-map-tool-mapTool-icon-choose-02: '#{$home-map-tool-bg}/mapTool-icon-choose-02.png';
+$home-map-tool-mapTool-icon-choose-03: '#{$home-map-tool-bg}/mapTool-icon-choose-03.png';
+$home-map-tool-mapTool-icon-choose-04: '#{$home-map-tool-bg}/mapTool-icon-choose-04.png';
+$home-map-tool-mapTool-icon-clean: '#{$home-map-tool-bg}/mapTool-icon-clean.png';
+$home-map-tool-mapTool-icon-measure: '#{$home-map-tool-bg}/mapTool-icon-measure.png';
+$home-map-tool-mapTool-icon-measure-01: '#{$home-map-tool-bg}/mapTool-icon-measure-01.png';
+$home-map-tool-mapTool-icon-measure-02: '#{$home-map-tool-bg}/mapTool-icon-measure-02.png';
+$home-map-tool-mapTool-icon-measure-03: '#{$home-map-tool-bg}/mapTool-icon-measure-03.png';
+//右边人脸/车辆/wifi/摄像头/视频结构化地图工具区域
+$home-map-right-kk-bg-arrow-hidden: '#{$home-map-right-kk-bg}/arrow-hidden.png';
+$home-map-right-kk-bg-arrow-show: '#{$home-map-right-kk-bg}/arrow-show.png';
+$home-map-right-kk-bg-right-bottom: '#{$home-map-right-kk-bg}/right-bottom.png';
+$home-map-right-kk-bg-right-center: '#{$home-map-right-kk-bg}/right-center.png';
+$home-map-right-kk-bg-right-center-bg: '#{$home-map-right-kk-bg}/right-center-bg.png';
+$home-map-right-kk-bg-right-top: '#{$home-map-right-kk-bg}/right-top.png';
+$home-map-right-kk-icon-btn-camera-icon: '#{$home-map-right-kk-icon}/camera-icon.png';
+$home-map-right-kk-icon-btn-car-icon: '#{$home-map-right-kk-icon}/car-icon.png';
+$home-map-right-kk-icon-btn-face-icon: '#{$home-map-right-kk-icon}/face-icon.png';
+$home-map-right-kk-icon-btn-wifi-icon: '#{$home-map-right-kk-icon}/wifi-icon.png';
+$home-map-right-kk-icon-btn-btn-bg-normal: '#{$home-map-right-kk-icon}/btn-bg-normal.png';
+$home-map-right-kk-icon-btn-btn-bg-selected: '#{$home-map-right-kk-icon}/btn-bg-selected.png';
+
+/*navigation底部导航*/
+$home-navigation-bottom-center-bg: '#{$home-navigation}/bottom-center-bg.png';
+$home-navigation-nav-hidden: '#{$home-navigation}/nav-hidden.png';
+$home-navigation-nav-show: '#{$home-navigation}/nav-show.png';
+$home-navigation-bg: '#{$home-navigation}/bg.png';
+$home-navigation-bottom-left: '#{$home-navigation}/bottom-left.png';
+$home-navigation-bottom-right: '#{$home-navigation}/bottom-right.png';
+$home-navigation-nav-btn-bg: '#{$home-navigation}/nav-btn-bg.png';
+$home-navigation-icon-btn-cwyj: '#{$home-navigation}/icon/btn-cwyj.png';
+$home-navigation-icon-btn-hdgjfx: '#{$home-navigation}/icon/btn-hdgjfx.png';
+$home-navigation-icon-btn-sjkb: '#{$home-navigation}/icon/btn-sjkb.png';
+$home-navigation-icon-btn-xtgl: '#{$home-navigation}/icon/btn-xtgl.png';
+$home-navigation-icon-btn-xwycfx: '#{$home-navigation}/icon/btn-xwycfx.png';
+//底部导航二级菜单
+$home-navigation-second-nav-btn-bg: '#{$home-navigation}/second-nav/btn-bg.png';
+$home-navigation-second-nav-btn-hover-bg: '#{$home-navigation}/second-nav/btn-hover-bg.png';
+$home-navigation-second-nav-center: '#{$home-navigation}/second-nav/center.png';
+$home-navigation-second-nav-center-bottom: '#{$home-navigation}/second-nav/center-bottom.png';
+$home-navigation-second-nav-center-top: '#{$home-navigation}/second-nav/center-top.png';
+$home-navigation-second-nav-left-bottom: '#{$home-navigation}/second-nav/left-bottom.png';
+$home-navigation-second-nav-left-center: '#{$home-navigation}/second-nav/left-center.png';
+$home-navigation-second-nav-left-top: '#{$home-navigation}/second-nav/left-top.png';
+$home-navigation-second-nav-right-bottom: '#{$home-navigation}/second-nav/right-bottom.png';
+$home-navigation-second-nav-right-center: '#{$home-navigation}/second-nav/right-center.png';
+$home-navigation-second-nav-right-top: '#{$home-navigation}/second-nav/right-top.png';
+//设备列表
+$home-device-list: '#{$home}/button-device.png';
+$home-device-list-base-bottom-center: '#{$home-device-list-root}/bottom-center.png';
+$home-device-list-base-bottom-left: '#{$home-device-list-root}/bottom-left.png';
+$home-device-list-base-bottom-right: '#{$home-device-list-root}/bottom-right.png';
+$home-device-list-base-corner-left-bottom: '#{$home-device-list-root}/corner-left-bottom.png';
+$home-device-list-base-corner-left-top: '#{$home-device-list-root}/corner-left-top.png';
+$home-device-list-base-corner-right-bottom: '#{$home-device-list-root}/corner-right-bottom.png';
+$home-device-list-base-corner-right-top: '#{$home-device-list-root}/corner-right-top.png';
+$home-device-list-base-left-center: '#{$home-device-list-root}/left-center.png';
+$home-device-list-base-right-center: '#{$home-device-list-root}/right-center.png';
+$home-device-list-base-top-center: '#{$home-device-list-root}/top-center.png';
+$home-device-list-base-top-left: '#{$home-device-list-root}/top-left.png';
+$home-device-list-base-top-right: '#{$home-device-list-root}/top-right.png';
+$home-device-list-base-device-bg: '#{$home-device-list-root}/device-bg.png';
+//预警记录
+$home-alarm-list: '#{$home}/button-warning.png';
+
+/*header区域共用样式*/
+%header-common {
+    flex: 1;
+    background: url($home-title-left) repeat-x;
+    line-height: 50px;
+}
+
+/*地图区域公用样式*/
+%map-tool-common {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 148px;
+    height: 100%;
+}
+
+/*home右侧设备卡口公用样式*/
+%map-hover-common {
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+
+%map-right-common {
+    flex: 1;
+    width: 100%;
+
+    @extend %map-hover-common;
+}
+
+/*混入*/
+@mixin navigationFunc($tagName, $btnBackground) {
+    flex: 1;
+    width: 100%;
+
+    display: flex;
+
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        height: 100%;
+        flex: 1;
+        background: url($home-navigation-bg) repeat-x;
+    }
+
+    &>#{$tagName} {
+        background: url($home-navigation-nav-btn-bg) no-repeat;
+
+        & i {
+            display: block;
+            background: url($btnBackground) no-repeat;
+            height: 98px;
+            width: 100px;
+            position: relative;
+            bottom: 50px;
+            left: 1px;
+
+            transition: transform 0.5s linear;
+
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            text-align: center;
+            width: 98px;
+        }
+    }
+}
+
+/*动画处理*/
+@keyframes map_transition {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 112px;
+    }
+}
+
+/*入场*/
+.fade-enter-active {
+    animation: map_transition .3s linear forwards;
+}
+
+/*出场*/
+.fade-leave-active {
+    animation: map_transition .3s linear reverse forwards;
+}

@@ -1,0 +1,311 @@
+.push-box {
+  width: 64.27%;
+	height: 320px;
+	background-color: #ffffff;
+	box-shadow: 0px 10px 7px 1px #e0e0e0;
+  border-radius: 6px;
+  
+  position: absolute;
+  top:80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  .title-box {
+    width:100%;
+    height: 52px;
+    background-color: #4179f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px 0 20px;
+    color:#fff;
+    font-size: 16px;
+
+    .left-box {
+      img {
+        margin-right: 14px;
+        width:24px;
+        height: 24px;
+      }
+    }
+
+    > img {
+      cursor: pointer;
+      width:16px;
+      height: 16px;
+    }
+  }
+
+  .function-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 12px 20px;
+    .left-box {
+      width:100%;
+      display: flex;
+      align-items: center;
+      .search-box {
+        width:42.2%;
+        height: 32px;
+        line-height: 32px;
+        background-color: #f5f7fc;
+        border-radius: 3px;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        input {
+          width: 94%;
+          background-color: transparent;
+          height: 32px;
+          color: #000;
+          font-size:14px;
+          border: 0; // 去除未选中状态边框
+          outline: none; // 去除选中状态边框
+        }
+
+        input::-webkit-input-placeholder {
+          /* placeholder颜色  */
+          color: #999;
+          /* placeholder字体大小  */
+          font-size: 14px;
+        }
+
+        i {
+          cursor: pointer;
+          line-height: 32px;
+        }
+      }
+
+      .condition-box {
+        margin-left: 42px;
+        color:#333;
+        .el-checkbox-group .el-checkbox {
+          margin-right: 16px;
+        }
+      }
+    }
+    .right-box {
+      display:flex;
+      align-items: center;
+
+      .el-button {
+        width: 81px !important;
+        height: 36px !important;
+        background-color: #6393f7 !important;
+        color: #fff !important;
+        border-radius: 6px !important;
+        border:none !important;
+        margin-left: 32px;
+      }
+    }
+  }
+
+  .select-list-box {
+    display: flex;
+    align-items: center;
+    color:#333;
+    font-size: 16px;
+    margin: 0 20px 6px;
+    width: 100%;
+    .btn-selected-box {
+      display: flex;
+      align-items: center;
+      width: 90%;
+      overflow-x: auto;
+      padding-bottom: 6px;
+    }
+    .btn-selected {
+      width: 120px;
+      height: 30px;
+      border-radius: 4px;
+      border: solid 1px #009aff;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      color: #009aff;
+      margin-right: 10px;
+      img {
+        cursor: pointer;
+      }
+      span {
+        display:inline-block;
+        width:74%;
+      }
+    }
+  }
+
+  .police-list-box {
+    margin:0 20px 0px;
+    height: calc(100% - 200px);
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    .police-info-box {
+      position: relative;
+      width: 230px;
+      height: 150px;
+      border: solid 2px #dfdfdf;
+      border-radius: 2px;
+      box-sizing:border-box;
+      margin: 0 8px 10px 0;
+      cursor: pointer;
+      .top-info-box {
+        margin: 4px 8px 0;
+        .info-box {
+          display: flex;
+          align-items: flex-start;
+          img {
+            margin-right: 12px;
+          }
+          .info {
+            font-size: 16px;
+            width: 70%;
+            p {
+              width:100%;
+            }
+            p:first-child {
+              margin-bottom: 6px;
+            }
+          }
+        }
+        .status-box {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 14px;
+          color:#333;
+          margin-top: 8px;
+
+          .if-online-box {
+            display:flex;
+            align-items: center;
+            .status {
+              width: 10px;
+              height: 10px;
+              background: #c3c3c3;
+              border-radius: 50%;
+              margin-right: 4px;
+            }
+          }
+
+          .online {
+            color:#46c767;
+
+            .status {
+              background: #46c767;
+            }
+          }
+
+          .pushed {
+            color:#46c767;
+          }
+        }
+      }
+
+      .push-function-box {
+        height: 44px;
+        box-sizing: border-box;
+        border-top: solid 1px #dfdfdf;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .left-push-box {
+          display: flex;
+          align-items: center;
+          color: #009aff;
+          font-size:16px;
+          margin-right: 20px;
+          cursor: pointer;
+          img {
+            margin-right: 4px;
+            width:14px;
+            height: 14px;
+          }
+        }
+        .right-push-box {
+          display: flex;
+          align-items: center;
+          color: #ff7545;
+          font-size:16px;
+          cursor: pointer;
+          img {
+            margin-right: 4px;
+            width:15px;
+            height: 14px;
+          }
+        }
+      }
+    }
+
+    .police-info-box.selected {
+      border: solid 2px #009aff;
+
+      .select-police-box {
+        position: absolute;
+        top:-1px;
+        right: -1px;
+      }
+    }
+  }
+
+  .police-list-box-tips {
+    height: calc(100% - 160px);
+  }
+
+  .page-box {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    img {
+      cursor: pointer;
+    }
+    .page {
+      margin: 0 16px;
+      span {
+        margin: 0 4px;
+      }
+      .current-page {
+        color:#4179f6;
+      }
+    }
+  }
+
+  .el-checkbox {
+    ::v-deep .el-checkbox__inner {
+      border: 1px solid #4179f6 !important;
+      background-color: #fff !important;
+      border-radius: 3px !important;
+    }
+
+    ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner {
+      background-color: #4179f7 !important;
+    }
+
+    ::v-deep .el-checkbox__input.is-checked .el-checkbox__inner:after {
+      border-color: #fff;
+    }
+
+    ::v-deep .el-checkbox__label {
+        color:#333 !important;
+        font-size:14px;
+      }
+  }
+
+  .ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.push-box-tips {
+  height: 360px;
+}

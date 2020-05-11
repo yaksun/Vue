@@ -1,0 +1,286 @@
+.taskList-tabs {
+  width: 96%;
+  padding: 0 1%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  .el-tabs__header {
+    margin: 0 0 10px;
+  }
+
+  .el-tabs__content {
+    height: calc(100% - 60px);
+  }
+
+  .el-tabs__header .el-tabs__item {
+    color: black !important;
+    font-size: 16px !important;
+    height: 50px !important;
+    line-height: 50px !important;
+    width: 48%;
+    text-align: center;
+  }
+
+  .el-tab-pane {
+    color: black !important;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .el-tabs__nav-scroll {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .el-tabs__nav {
+    white-space: nowrap;
+    position: relative;
+    transition: -webkit-transform 0.3s;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+    float: left;
+    z-index: 2;
+    text-align: center;
+    width: inherit;
+  }
+
+  .el-tabs__active-bar {
+    width: 48% !important;
+  }
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: rgb(20, 20, 20) !important;
+  }
+}
+
+/**
+*
+*下拉选择框
+**/
+// 下拉选择框
+.el-select-task {
+  .el-select__tags-text {
+    color: #fff !important;
+  }
+
+  //   .el-input .el-input__inner {
+  //     border: none !important;
+  //     background-color: #d7d7d8;
+  //     color: rgba(255, 255, 255, 0.85) !important;
+  //   }
+  //   .el-select .el-input__inner {
+  //     border: none !important;
+  //     background-color: #d7d7d8;
+  //     color: rgba(255, 255, 255, 0.85) !important;
+  //   }
+  //   .el-select__tags .el-tag.el-tag--info .el-tag__close.el-icon-close {
+  //     background-color: #aeb4b5;
+  // }
+  //   .el-select__tags .el-tag.el-tag--info {
+  //     background-color: #f4f4f5 !important;
+  //     border-color: #e9e9eb !important;
+  //     color: rgba(255, 255, 255, 0.85);
+  //   }
+  //   .el-select__tags .el-tag.el-tag--info .el-tag__close.el-icon-close {
+  //     background-color: #f4f4f5 !important;
+  //   }
+
+}
+
+// 箭头
+.el-select-dropdown.el-popper[x-placement^=bottom] {
+  .popper__arrow::after {
+    border-bottom-color: rgba(194, 197, 198, 0.7) !important;
+    top: 0 !important;
+  }
+
+  .el-scrollbar {
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(194, 197, 198, 0.7) !important;
+  }
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: #409EFF;
+  background-color: none !important;
+}
+
+/**
+  *复选框
+  *
+  **/
+.el-checkList {
+  .el-checkbox .el-checkbox__label {
+    color: rgb(14, 13, 13) !important;
+  }
+
+  .el-input .el-input__inner {
+    border: none !important;
+    background-color: #d7d7d8;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .el-select .el-input__inner {
+    border: none !important;
+    background-color: #d7d7d8;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  .el-select-dropdown {
+    border-color: rgba(80, 216, 255, 0.7) !important;
+    background-color: #f5f7fc !important;
+  }
+
+  .el-select-dropdown .el-select-dropdown__item.hover,
+  .el-select-dropdown .el-select-dropdown__item:hover {
+    background-color: #c1c3c6 !important;
+  }
+
+  .el-select-dropdown .el-select-dropdown__item {
+    color: rgba(179, 177, 177, 1);
+  }
+}
+
+/**
+  *时间控件
+  *
+  **/
+  .xiafa-time{
+    font-size: 13px !important;
+    .el-form-item__content {
+      line-height: 0;
+    }
+    .el-form-item__label{
+      font-size: 11px !important;
+    }
+    .el-range-editor--small.el-input__inner {
+      height: 27px;
+    }
+    .el-date-editor .el-range__icon{
+      font-size: 12px;
+    }
+    .el-range-editor--small .el-range-input {
+      font-size: 11px;
+    }
+    .el-range-editor--small .el-range-separator {
+      line-height: 24px;
+      font-size: 11px;
+    }
+    .el-date-editor .el-range-separator{
+      width: 10%;
+      padding:0 2px;
+    }
+    .el-date-editor .el-range-input{
+      width: 67%;
+    }
+  }
+  
+  /**展开的日历**/
+  .el-picker-panel__shortcut{
+    font-size: 11px;
+  }
+  .el-date-range-picker__header div{
+    font-size: 11px;
+  }
+  .el-date-table{
+    font-size: 11px;
+  }
+.time-select {
+  // width: 250px !important;
+  // margin-left: 15px;
+}
+
+.el-date-editor.el-input__inner {
+  border: 3px !important;
+  
+  background-color: #f5f7fc !important;
+  width: auto !important;
+
+  .el-range-input {
+    color: #000 !important;
+  }
+
+  .el-range-separator {
+    color: #000 !important;
+  }
+}
+
+.el-picker-panel {
+  background-color: rgba(158, 160, 163, 0.9) !important;
+}
+
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-date-table {
+  background-color: rgba(69, 98, 120, 0.4);
+}
+
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .available.today>div>span {
+  background-color: #41575e;
+  color: #002965 !important;
+  font-weight: bold;
+}
+
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-date-table td.end-date span,
+.el-picker-panel .el-picker-panel__body-wrapper .el-picker-panel__content .el-date-table td.start-date span {
+  background-color: #a9cdd8 !important;
+  color: #002965 !important;
+}
+
+/**
+  *警情级别的复选框
+  **/
+.warning-level {
+  width: 120px;
+}
+/**关键字搜索**/
+.search-box{
+  font-size: 11px !important;
+   input {
+    padding: 0 20px 0 6px !important;
+    font-size: 11px !important;
+    border-radius: 5px;
+    height: 27px;
+    &::placeholder {
+      font-size: 11px !important;
+    }
+  }
+  .el-form-item__label{
+    font-size: 11px !important;
+  }
+}
+/***分页**/
+.taskList-page {
+  .el-pager .number {
+    border: none !important;
+  }
+
+  .el-pager .number.active {
+    background-color: none !important;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
+  }
+
+  .el-pager li {
+   min-width: auto !important; 
+  }
+
+  .el-pagination__jump {
+    margin-left: 6px;
+    color: #000 !important;
+  }
+
+}
+
+.taskList-page.el-pagination {
+  padding: 0 !important;
+  text-align: center;
+  margin-left: -40px;
+}
+
+.el-pagination .el-pagination__jump .el-input__inner {
+  color: #000 !important;
+}
