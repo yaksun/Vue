@@ -14,7 +14,7 @@
     "axios": "^0.19.1",
     "babel-plugin-component": "^1.1.1",
     "element-ui": "^2.13.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "mockjs": "^1.1.0",
     "pubsub-js": "^1.8.0",
     "stylus": "^0.54.7",
